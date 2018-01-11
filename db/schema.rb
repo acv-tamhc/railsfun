@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180110085446) do
+ActiveRecord::Schema.define(version: 20180111071906) do
 
   create_table "categories", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "title"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20180110085446) do
     t.decimal "price", precision: 10, scale: 2
     t.boolean "published"
     t.bigint "category_id"
+    t.string "email"
     t.index ["category_id"], name: "index_products_on_category_id"
   end
 

@@ -1,7 +1,11 @@
+
 class Product < ActiveRecord::Base
   validates :title, :description, presence: true
   validates :price, numericality: { greater_than: 0 }, presence: true
-  validate :title_is_shorter_than_description
+  #validates :email, email: true
+  validate :title_is_shorter_than_description 
+  
+
 
   def title_is_shorter_than_description
     return if title.blank? or description.blank?
