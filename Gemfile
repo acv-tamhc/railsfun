@@ -5,6 +5,18 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+
+# pry
+
+
+gem 'pry-byebug'
+gem 'pry-rails'
+gem 'pry-doc'
+gem 'pry-stack_explorer'
+
+# default
+gem 'simple_form'
+
 gem 'enumerize'
 
 gem 'awesome_print'

@@ -1,0 +1,8 @@
+<%= form_tag(create_product_path, method: 'post') do %>	
+<%= label_tag(:title, 'Title:') %>
+<%= text_field_tag(:title) %>
+<%= label_flied_tag(:description, 'Description') %>
+<%= label_tag(:description, 'Description') %>
+<%= text_field_tag(:description) %>
+<%= submit_tag('Create') %>
+<% end %>

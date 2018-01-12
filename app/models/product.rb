@@ -11,7 +11,7 @@ class Product < ActiveRecord::Base
 
   validate :title_is_shorter_than_description 
   
-  before_validation :strip_title
+  #before_validation :strip_title
   # name scope != params
   scope :active, -> {where(published: true)}
   scope :priced_more_than, -> (price) {where('price > ?', price)}

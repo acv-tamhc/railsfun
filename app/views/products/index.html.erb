@@ -1,8 +1,10 @@
 <table>
 	<thead>
+		<%= link_to('Create product', new_product_path) %>
 		<tr>
 			<th>title</th>
 			<th>desciption</th>
+			<th>country</th>
 			<th>price</th>
 			<th>published</th>
 			<th>category</th>
@@ -14,6 +16,7 @@
 		<tr>
 			<td><%= link_to(product.title,product_path(product))%></td>
 			<td><%= product.description%></td>
+			<td><%= product.try(:country)%></td>
 			<td><%= product.price%></td>
 			<td><%= product.published%></td>
 			<td><%= product.category.try(:title) %></td>
