@@ -12,10 +12,12 @@ class ProductsController < ApplicationController
 	def create
 		@product = Product.new(product_params)
 		# byebug # debug system
-		flash[:notice] = 'You have successfully created the product' # Trễ một bước sau mới hiện
-		# flash.now[:notice] = 'There' # hiện ngay lập tức ở vị trí thay đổi (:placeholder) - chi thay đổi một vùng
-		return redirect_to products_path if @product.save
-		render :new # 
+		flash[:notice] = 'You have successfully created the product'
+		
+		# return redirect_to products_path if @product.save
+		return redirect_to products_path, notice: 'successfully' if @product.save
+		flash.now[:notice] = 'Not save'
+		render :new
 	end
 
 
