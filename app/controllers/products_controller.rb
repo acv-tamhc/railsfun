@@ -43,6 +43,18 @@ class ProductsController < ApplicationController
    	@product = Product.find(params[:id])
    end
 
+   def destroy
+
+   	@product = Product.find(params[:id])
+   	@product.published = false
+   	flash[:notice] = 'Notice delete' 
+   	flash[:notice] = 'Successfully' if @product.save 
+   	#flash[:notice] = 'Successfully' if @product.destroy 
+
+   	redirect_to products_path
+
+   end
+
    private
    def product_params
    	# permit : field params
