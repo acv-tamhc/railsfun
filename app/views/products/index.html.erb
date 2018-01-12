@@ -1,0 +1,23 @@
+<table>
+	<thead>
+		<tr>
+			<th>title</th>
+			<th>desciption</th>
+			<th>price</th>
+			<th>published</th>
+			<th>category</th>
+		</tr>
+	</thead>
+
+	<tbody>
+		<% @products.each do | product| %>
+		<tr>
+			<td><%= link_to(product.title,product_path(product))%></td>
+			<td><%= product.description%></td>
+			<td><%= product.price%></td>
+			<td><%= product.published%></td>
+			<td><%= product.category.try(:title) %></td>
+		</tr>
+		<%end%>
+	</tbody>
+</table>
