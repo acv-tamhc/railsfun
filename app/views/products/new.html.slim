@@ -1,0 +1,8 @@
+== simple_form_for @product do |f|
+	= f.input :title, placeholder: 'Enter a title', input_html: { maxlength: 20, minlength: 5 }
+	= f.input :description, placeholder: 'Enter a description', input_html: { maxlength: 20, minlength: 5 }
+	= f.input :level, prompt: 'Select a level'
+	= f.input :price, placeholder: 'Enter a price'
+	= f.input :published
+	= f.association :category, prompt: 'Select a category'
+	= f.button :submit

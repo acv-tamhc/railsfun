@@ -5,13 +5,10 @@
 #   gem 'mysql2'
 #
 default: &default
-  adapter: postgresql
+  adapter: mysql2
   database: railsfun
   username: root
   password: 
-  port: 5432
-  password: 
-  #host:     ec2-54-221-251-195.compute-1.amazonaws.com
   #socket: /tmp/mysql.sock
 
 development:
