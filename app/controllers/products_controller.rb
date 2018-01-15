@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
- 	before_action :get_product_by_id, only: [:show, :edit, :update, :destroy]
+ 	#before_action :get_product_by_id, only: [:show, :edit, :update, :destroy]
 
 	def index
 		#@products = Product.all # not load categories once
