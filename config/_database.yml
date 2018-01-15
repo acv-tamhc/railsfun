@@ -6,11 +6,11 @@
 #
 default: &default
   adapter: postgresql
-  database: railsfun
-  username: root
-  password: 
+  database: d2i6646ukbvf56
+  username: ufsifwvdfllrbn
   port: 5432
-  password: 
+  password: 907505b051093a040e5a79adf5363022471eae58fec4bc49b2235f6855d0419d
+  URI:     postgres://ufsifwvdfllrbn:907505b051093a040e5a79adf5363022471eae58fec4bc49b2235f6855d0419d@ec2-54-221-251-195.compute-1.amazonaws.com:5432/d2i6646ukbvf56
   #host:     ec2-54-221-251-195.compute-1.amazonaws.com
   #socket: /tmp/mysql.sock
 

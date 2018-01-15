@@ -13,7 +13,7 @@ gem 'pry-doc'
 gem 'pry-stack_explorer'
 
 # default
-gem 'simple_form'
+gem 'simple_form' 
 
 gem 'enumerize'
 
