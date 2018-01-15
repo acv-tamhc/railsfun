@@ -1,4 +1,6 @@
 class ProductsController < ApplicationController
+ 	before_action :get_product_by_id, only: [:show, :edit, :update, :destroy]
+
 	def index
 		#@products = Product.all # not load categories once
 		@products = Product.includes(:category).all
@@ -61,5 +63,11 @@ class ProductsController < ApplicationController
    	params.require(:product).permit(:title, :description, :price, :category_id) # notation => category = category_id
    end
 
+   def get_product_by_id
+   	@product = Product.find(product_id)
+   end
+   def product_id
+   	params[:id]
+   end
 
 end
