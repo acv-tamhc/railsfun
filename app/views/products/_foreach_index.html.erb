@@ -12,6 +12,8 @@
 		</tr>
 	</thead>
 	<tbody>
-		<%= render partial: 'product', collection: @products %><!-- collection -->
+		<% @products.each do | product| %>
+		<%= render partial: 'product', locals: {product: product} %>
+		<%end%>
 	</tbody>
 </table>
