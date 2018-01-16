@@ -8,8 +8,46 @@ html
     == javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
 
   body
-  	div.message_system
-  	- flash.each do |name, msg|
-		  == content_tag :div, msg, class: name
-      
-    == yield
+    div.page
+      div.header-side
+        div.side-brand
+          div.logo-brand
+            span Railsfun
+            div.sidebar-toggle
+              span
+            
+      div.side-bar
+        div.list_item.list_menu
+          div.item.has-sub
+            a> href='#' 
+              span.icon = icon('product-hunt')
+              span.name 
+                | Manage Product
+            div.list_item.list_sub
+              div.item
+                a> href='/products'
+                  span.icon = icon('group')
+                  span.name
+                    | Product group
+              div.item
+                a> href='/products'
+                  span.icon = icon('product-hunt')
+                  span.name
+                    | Product
+              div.item 
+                a> href='#'
+                  span.icon = icon('cogs')
+                  span.name
+                    | Setting
+                
+            span.indicator = icon('angle-down')
+          div.item
+            a> href='/products'
+              span.icon = icon('cogs')
+              span.name 
+                | System Setting
+    	div.message_system
+    	- flash.each do |name, msg|
+  		  == content_tag :div, msg, class: name
+      div.page-content  
+        == yield

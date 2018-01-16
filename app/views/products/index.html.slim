@@ -1,24 +1,36 @@
-== link_to('Create product', new_product_path)
-table
-	thead
-		tr
-			th title
-			th desciption
-			th country
-			th price
-			th published
-			th category
-			th Action
+div.page-content-header
+	.list_item
+		div.item
+			== link_to('Manage', products_path)
+		div.item
+			== link_to('Manage trash', products_path)
+		div.item
+			== link_to('Create product', new_product_path)
 
-	tbody
-		- @products.each do |product|
-			tr.product
-			 	td == link_to(product.title, product_path(product))
-			 	td == product.description
-			 	td == product.try(:country)
-			 	td == product.price
-			 	td == product.published
-			 	td == product.category.try(:title)
-			 	td 
-			 		== link_to('Edit',edit_product_path(product)) 
-			 		== link_to('Remove',product_path(product, {method: :delete, data: { confirm: 'Are you sure delete ?'}}))
+div.page_table_content
+	div.page_table_title
+		span
+			| Manage product
+	table.table_content
+		thead
+			tr
+				th title
+				th desciption
+				th country
+				th price
+				th published
+				th category
+				th Action
+
+		tbody
+			- @products.each do |product|
+				tr.product
+				 	td == link_to(product.title, product_path(product))
+				 	td == product.description
+				 	td == product.try(:country)
+				 	td == product.price
+				 	td == product.published
+				 	td == product.category.try(:title)
+				 	td 
+				 		== link_to('Edit',edit_product_path(product)) 
+				 		== link_to('Remove',product_path(product, {method: :delete, data: { confirm: 'Are you sure delete ?'}}))

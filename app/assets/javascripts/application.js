@@ -12,4 +12,30 @@
 //
 //= require rails-ujs
 //= require turbolinks
-//= require_tree .
+//= require jquery
+//= require jquery_ujs
+//= require bootstrap
+
+jQuery(document).ready(function() {
+	if(jQuery('.header-side .sidebar-toggle').length) {
+		jQuery('.header-side .sidebar-toggle').each(function(index, value) {
+			jQuery(this).on('click',function() {
+				jQuery('.side-bar').toggleClass('minimal');
+			});
+		})
+	}
+	/** has sub */
+	if(jQuery('.list_menu .item.has-sub').length) {
+		jQuery('.list_menu .item.has-sub').each(function(index, value) {
+			jQuery(value).find('a').first().attr('href', '#');
+			jQuery(value).on('click', function(e) {
+				if(jQuery(this).hasClass('active')) {
+					jQuery(this).removeClass('active');
+				} else {
+					jQuery(this).addClass('active');
+				}
+				return false;
+			});
+		});
+	}
+});
