@@ -8,6 +8,7 @@ end
 gem 'slim'
 gem 'font-awesome-sass', '~> 4.7.0'
 gem 'jquery-rails'
+gem 'dotenv-rails'
 #gem 'slim-rails'
 # pry
 gem 'pry-byebug'
