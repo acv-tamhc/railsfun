@@ -47,6 +47,7 @@ GEM
     arel (9.0.0)
     ast (2.4.0)
     bindex (0.5.0)
+    brakeman (4.4.0)
     builder (3.2.3)
     byebug (11.0.0)
     capybara (2.18.0)
@@ -233,6 +234,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  brakeman
   byebug
   capybara (~> 2.13)
   coffee-rails (~> 4.2)
