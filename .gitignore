@@ -1,0 +1,8 @@
+# Ignore all logfiles and tempfiles.
+/log/*
+/tmp/*
+
+/node_modules
+
+config/database.yml
+.env
