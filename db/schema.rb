@@ -11,6 +11,7 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2019_03_06_163116) do
+# ActiveRecord::Schema.define(version: 2019_03_06_161301) do
 
   create_table "accounts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "supplier_id"
@@ -42,4 +43,5 @@ ActiveRecord::Schema.define(version: 2019_03_06_163116) do
   end
 
   add_foreign_key "accounts", "suppliers"
+
 end
