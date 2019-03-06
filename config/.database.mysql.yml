@@ -1,0 +1,26 @@
+default: &default
+  adapter: mysql2
+  host: localhost
+  port: 3306
+  username: root
+  password:
+  encoding: utf8
+  pool: 5
+
+development:
+  <<: *default
+  database: railsfun_dev
+
+test:
+  <<: *default
+  database: railsfun_test
+
+staging:
+  <<: *default
+  database: railsfun_staging
+
+production:
+  <<: *default
+  database: railsfun_production
+  username: <%= ENV['RAILSFUN_DATABASE_USERNAME'] %>
+  password: <%= ENV['RAILSFUN_DATABASE_PASSWORD'] %>
