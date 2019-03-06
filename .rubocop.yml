@@ -1,0 +1,23 @@
+# inherit_from: .rubocop_todo.yml
+
+AllCops:
+  TargetRubyVersion: 2.5.1
+  Exclude:
+    - 'bin/**/*'
+    - 'db/**/*'
+    - 'config/**/*'
+
+Rails:
+  Enabled: true
+Rails/SkipsModelValidations:
+  Enabled: false
+
+Naming/FileName:
+  Exclude:
+    - 'Gemfile'
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
