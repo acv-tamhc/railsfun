@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2019_03_06_163116) do
     t.string "account_number", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["supplier_id"], name: "index_accounts_on_supplier_id"
+    t.index ["supplier_id"], name: "index_accounts_on_supplier_id", unique: true
   end
 
   create_table "authors", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -41,4 +41,5 @@ ActiveRecord::Schema.define(version: 2019_03_06_163116) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "accounts", "suppliers"
 end
