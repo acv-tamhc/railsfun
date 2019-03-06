@@ -33,9 +33,13 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 gem 'rubocop', require: false
+gem 'slim'
+gem 'kaminari'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.8'
+  gem 'guard-rspec', require: false
   # add support spec
   gem 'factory_bot_rails'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -45,6 +49,8 @@ group :development, :test do
   gem 'selenium-webdriver'
   # auto create data
   gem 'faker'
+  # support debug
+  gem 'pry-byebug'
 end
 
 group :development do
